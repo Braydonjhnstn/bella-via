@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, useNavigate, useParams } from 'react-router-dom'
+import { useEffect } from 'react'
 import './App.css'
 
 const totalPhotos = 50
@@ -107,10 +108,10 @@ function HomePage() {
               className="welcome-button"
               onClick={(e) => {
                 e.preventDefault()
-                handleScrollTo('tour')
+                handleScrollTo('apply')
               }}
             >
-              TAKE A TOUR →
+              CONTACT US →
             </button>
           </div>
           <div className="welcome-image">
@@ -199,6 +200,10 @@ function HomePage() {
 
 function GalleryPage() {
   const navigate = useNavigate()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <div className="gallery-page">
