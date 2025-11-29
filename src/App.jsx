@@ -230,6 +230,10 @@ function GalleryPage() {
           </button>
         ))}
       </div>
+
+      <footer className="footer">
+        <p>&copy; 2024 Bella Via. All rights reserved.</p>
+      </footer>
     </div>
   )
 }
