@@ -246,7 +246,7 @@ html {
   font-size: 0.95rem;
   font-weight: 600;
   letter-spacing: 1px;
-  background: #8b6f47;
+  background: #3d4650;
   color: white;
   border: none;
   border-radius: 0;
@@ -259,7 +259,7 @@ html {
 }
 
 .welcome-button:hover {
-  background: #7a5f3a;
+  background: #2d3439;
   transform: translateY(-2px);
 }
 
@@ -398,7 +398,7 @@ html {
   font-size: 0.95rem;
   font-weight: 600;
   letter-spacing: 1px;
-  background: #8b6f47;
+  background: #3d4650;
   color: white;
   border: none;
   border-radius: 0;
@@ -411,7 +411,7 @@ html {
 }
 
 .gallery-button:hover {
-  background: #7a5f3a;
+  background: #2d3439;
   transform: translateY(-2px);
 }
 

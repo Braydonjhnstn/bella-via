@@ -66,7 +66,7 @@ function HomePage() {
               >
                 PHOTO GALLERY
               </a>
-              <span className="nav-separator">,</span>
+              <span className="nav-separator">|</span>
               <a
                 href="#apply"
                 onClick={(e) => {
@@ -82,7 +82,7 @@ function HomePage() {
         </nav>
         <div className="hero-content">
           <h1 className="hero-title">Bella Via Condominiums</h1>
-          <p className="hero-subtitle">luxury living awaits</p>
+          <p className="hero-subtitle">Luxury Living Awaits</p>
         </div>
       </section>
 
@@ -163,11 +163,11 @@ function HomePage() {
           <div className="contact-info">
             <div className="contact-info-item">
               <h3>Address</h3>
-              <p>123 Bella Via Lane, Bellevue, WA 98004</p>
+              <p>1926 S. Washington St. Tacoma, WA 98405</p>
             </div>
             <div className="contact-info-item">
               <h3>Property Manager</h3>
-              <p>Jane Doe · (555) 123-4567 · manager@bellavia.com</p>
+              <p>Anthony Kunitsa · (253) 732-0718 · Bellaviacondominiums@gmail.com</p>
             </div>
           </div>
           <div className="contact-copy">
@@ -178,11 +178,11 @@ function HomePage() {
             </p>
             <p>
               Office hours are Monday–Friday, 9:00 AM to 6:00 PM, and Saturday by appointment. Tours can be scheduled
-              in advance by phone or email, and virtual tours are available upon request.
+              in advance anytime by phone or email. Virtual tours are coming soon.
             </p>
             <p>
-              Prefer to speak with someone directly? Call our leasing office at <strong>(555) 123-4567</strong> or email{' '}
-              <strong>leasing@bellavia.com</strong>.
+              Prefer to speak with someone directly? Call our leasing office anytime at <strong>(253) 732-0718</strong> or email{' '}
+              <strong>Bellaviacondominiums@gmail.com</strong>.
             </p>
           </div>
         </div>
