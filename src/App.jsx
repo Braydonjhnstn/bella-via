@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, useNavigate, useParams } from 'react-router-dom'
 import { useEffect } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import './App.css'
 
 const totalPhotos = 50
@@ -31,6 +32,7 @@ function App() {
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/gallery/:photoId" element={<PhotoDetailPage />} />
       </Routes>
+      <Analytics />
     </BrowserRouter>
   )
 }
