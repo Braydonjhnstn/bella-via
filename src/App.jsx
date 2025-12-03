@@ -31,6 +31,8 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/gallery/:photoId" element={<PhotoDetailPage />} />
+        <Route path="/bedroom2" element={<Bedroom2Page />} />
+        <Route path="/bedroom3" element={<Bedroom3Page />} />
       </Routes>
       <Analytics />
     </BrowserRouter>
@@ -59,14 +61,47 @@ function HomePage() {
             </div>
             <div className="nav-links">
               <a
-                href="/gallery"
+                href="#tour"
                 onClick={(e) => {
                   e.preventDefault()
-                  navigate('/gallery')
+                  handleScrollTo('tour')
                 }}
                 className="nav-link"
               >
-                PHOTO GALLERY
+                About Us
+              </a>
+              <span className="nav-separator">|</span>
+              <a
+                href="#photo-gallery"
+                onClick={(e) => {
+                  e.preventDefault()
+                  handleScrollTo('photo-gallery')
+                }}
+                className="nav-link"
+              >
+                Photo Gallery
+              </a>
+              <span className="nav-separator">|</span>
+              <a
+                href="#virtual-tour"
+                onClick={(e) => {
+                  e.preventDefault()
+                  handleScrollTo('virtual-tour')
+                }}
+                className="nav-link"
+              >
+                Virtual Tour
+              </a>
+              <span className="nav-separator nav-separator-after-virtual-tour">|</span>
+              <a
+                href="#floor-plans"
+                onClick={(e) => {
+                  e.preventDefault()
+                  handleScrollTo('floor-plans')
+                }}
+                className="nav-link"
+              >
+                Floor Plans
               </a>
               <span className="nav-separator">|</span>
               <a
@@ -77,7 +112,7 @@ function HomePage() {
                 }}
                 className="nav-link"
               >
-                CONTACT US
+                Contact Us
               </a>
             </div>
           </div>
@@ -101,20 +136,12 @@ function HomePage() {
               <br />
               Bella Via Condominiums
             </h2>
+            <h3 className="welcome-subtitle">About Us</h3>
             <p className="welcome-body">
               Bella Via Condominiums offers luxury living at its finest. Our residences feature stunning territorial
               views, attention-to-detail designer finishes like custom closets and under-mount cabinet lighting, and
               hotel-like amenities. Floor plans have been maximized for spacious, city living at its finest.
             </p>
-            <button
-              className="welcome-button"
-              onClick={(e) => {
-                e.preventDefault()
-                handleScrollTo('apply')
-              }}
-            >
-              CONTACT US →
-            </button>
           </div>
           <div className="welcome-image">
             <img src="/welcome-home.jpg" alt="Bella Via Condominiums" />
@@ -123,7 +150,7 @@ function HomePage() {
       </section>
 
       {/* Photo Gallery Section */}
-      <section className="photo-gallery-section">
+      <section className="photo-gallery-section" id="photo-gallery">
         <div className="photo-gallery-container">
           <div className="photo-gallery-left">
             <div className="gallery-headline">
@@ -154,6 +181,56 @@ function HomePage() {
                 VIEW ALL PHOTOS →
               </button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Virtual Tour Section */}
+      <section className="virtual-tour-section" id="virtual-tour">
+        <div className="virtual-tour-container">
+          <div className="virtual-tour-image">
+            <img src="/vt1.png" alt="Bella Via Virtual Tour" />
+          </div>
+          <div className="virtual-tour-content">
+            <div className="virtual-tour-headline">
+              <span className="headline-line"></span>
+              <span className="headline-text">TAKE A TOUR</span>
+            </div>
+            <h2 className="virtual-tour-title">Virtual Tours Now Available</h2>
+            <p className="virtual-tour-body">
+              Tour your new home now, with up to date full condominium tours for both the 3 bedroom 2.5 bathroom and
+              the 2 bedroom 2.5 bathroom.
+            </p>
+            <div className="virtual-tour-buttons">
+              <button
+                className="virtual-tour-button"
+                onClick={(e) => {
+                  e.preventDefault()
+                  navigate('/bedroom2')
+                }}
+              >
+                2 Bedroom →
+              </button>
+              <button
+                className="virtual-tour-button"
+                onClick={(e) => {
+                  e.preventDefault()
+                  navigate('/bedroom3')
+                }}
+              >
+                3 Bedroom →
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Floor Plans Section */}
+      <section className="floor-plans-section" id="floor-plans">
+        <div className="container">
+          <h2 className="section-title">Floor Plans</h2>
+          <div className="about-content">
+            <p>Floor plan information and availability coming soon. Contact us for current options.</p>
           </div>
         </div>
       </section>
@@ -295,6 +372,74 @@ function PhotoDetailPage() {
           ›
         </button>
       </div>
+    </div>
+  )
+}
+
+function Bedroom2Page() {
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
+  return (
+    <div className="bedroom-page">
+      <button
+        className="gallery-back-icon"
+        aria-label="Back to home"
+        onClick={() => {
+          navigate('/')
+        }}
+      >
+        ←
+      </button>
+
+      <header className="bedroom-page-header">
+        <h1 className="bedroom-page-title">2 Bedroom 2.5 Bathroom Virtual Tour</h1>
+      </header>
+
+      <div className="bedroom-page-content">
+        <p>Virtual tour content for 2 bedroom unit coming soon.</p>
+      </div>
+
+      <footer className="footer">
+        <p>&copy; 2024 Bella Via. All rights reserved.</p>
+      </footer>
+    </div>
+  )
+}
+
+function Bedroom3Page() {
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
+  return (
+    <div className="bedroom-page">
+      <button
+        className="gallery-back-icon"
+        aria-label="Back to home"
+        onClick={() => {
+          navigate('/')
+        }}
+      >
+        ←
+      </button>
+
+      <header className="bedroom-page-header">
+        <h1 className="bedroom-page-title">3 Bedroom 2.5 Bathroom Virtual Tour</h1>
+      </header>
+
+      <div className="bedroom-page-content">
+        <p>Virtual tour content for 3 bedroom unit coming soon.</p>
+      </div>
+
+      <footer className="footer">
+        <p>&copy; 2024 Bella Via. All rights reserved.</p>
+      </footer>
     </div>
   )
 }

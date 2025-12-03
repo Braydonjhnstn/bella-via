@@ -34,7 +34,7 @@ html {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .nav-link {
@@ -232,6 +232,14 @@ html {
   font-family: 'Playfair Display', serif;
 }
 
+.welcome-subtitle {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #333;
+  margin: 20px 0 10px 0;
+  font-family: 'Playfair Display', serif;
+}
+
 .welcome-body {
   font-size: 1.1rem;
   line-height: 1.8;
@@ -284,6 +292,166 @@ html {
   margin-bottom: 60px;
   color: #333;
   font-weight: 700;
+}
+
+/* About Us Section */
+.about-section {
+  padding: 100px 0;
+  background: white;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+/* Virtual Tour Section */
+.virtual-tour-section {
+  padding: 100px 0;
+  background: #f5f5f0;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.virtual-tour-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.virtual-tour-image {
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  overflow: hidden;
+  border-radius: 0;
+}
+
+.virtual-tour-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+}
+
+.virtual-tour-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.virtual-tour-headline {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.virtual-tour-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #333;
+  line-height: 1.2;
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+}
+
+.virtual-tour-subtitle {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #333;
+  margin: 20px 0 10px 0;
+  font-family: 'Playfair Display', serif;
+}
+
+.virtual-tour-body {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin: 0 0 30px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.virtual-tour-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.virtual-tour-button {
+  padding: 15px 35px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background: #3d4650;
+  color: white;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.virtual-tour-button:hover {
+  background: #2d3439;
+  transform: translateY(-2px);
+}
+
+/* Bedroom Pages */
+.bedroom-page {
+  min-height: 100vh;
+  background: #ffffff;
+  padding: 40px 60px 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.bedroom-page-header {
+  max-width: 1200px;
+  margin: 40px auto 30px;
+  text-align: center;
+}
+
+.bedroom-page-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #111;
+  font-family: 'Playfair Display', serif;
+}
+
+.bedroom-page-content {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  padding: 0 40px;
+  text-align: center;
+}
+
+.bedroom-page-content p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Floor Plans Section */
+.floor-plans-section {
+  padding: 100px 0;
+  background: white;
 }
 
 /* Photo Gallery Section */
@@ -589,6 +757,9 @@ html {
 
   .nav-links {
     order: 2;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px 8px;
   }
 
   .nav-logo {
@@ -598,6 +769,10 @@ html {
 
   .nav-link {
     font-size: 0.85rem;
+  }
+
+  .nav-separator-after-virtual-tour {
+    display: none;
   }
 
   .hero-content {
@@ -629,6 +804,32 @@ html {
 
   .welcome-body {
     font-size: 1rem;
+  }
+
+  .virtual-tour-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0 20px;
+  }
+
+  .virtual-tour-title {
+    font-size: 2.5rem;
+  }
+
+  .virtual-tour-body {
+    font-size: 1rem;
+  }
+
+  .virtual-tour-image {
+    min-height: 400px;
+  }
+
+  .virtual-tour-buttons {
+    flex-direction: column;
+  }
+
+  .virtual-tour-button {
+    width: 100%;
   }
 
   .welcome-image {
@@ -805,6 +1006,18 @@ html {
 
   .photo-detail-page {
     padding: 30px 20px 0;
+  }
+
+  .bedroom-page {
+    padding: 30px 20px 0;
+  }
+
+  .bedroom-page-title {
+    font-size: 2.2rem;
+  }
+
+  .bedroom-page-content {
+    padding: 0 20px;
   }
 
   .photo-detail-content {
