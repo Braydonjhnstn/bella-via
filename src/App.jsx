@@ -33,6 +33,8 @@ function App() {
         <Route path="/gallery/:photoId" element={<PhotoDetailPage />} />
         <Route path="/bedroom2" element={<Bedroom2Page />} />
         <Route path="/bedroom3" element={<Bedroom3Page />} />
+        <Route path="/floorplan2" element={<FloorPlan2Page />} />
+        <Route path="/floorplan3" element={<FloorPlan3Page />} />
       </Routes>
       <Analytics />
     </BrowserRouter>
@@ -198,8 +200,7 @@ function HomePage() {
             </div>
             <h2 className="virtual-tour-title">Virtual Tours Now Available</h2>
             <p className="virtual-tour-body">
-              Tour your new home now, with up to date full condominium tours for both the 3 bedroom 2.5 bathroom and
-              the 2 bedroom 2.5 bathroom.
+              Experience your future home through immersive 3D virtual tours. Explore every detail of our spacious 2-bedroom and 3-bedroom floor plans, each featuring 2.5 bathrooms and premium finishes throughout.
             </p>
             <div className="virtual-tour-buttons">
               <button
@@ -226,11 +227,41 @@ function HomePage() {
       </section>
 
       {/* Floor Plans Section */}
-      <section className="floor-plans-section" id="floor-plans">
-        <div className="container">
-          <h2 className="section-title">Floor Plans</h2>
-          <div className="about-content">
-            <p>Floor plan information and availability coming soon. Contact us for current options.</p>
+      <section className="welcome-section" id="floor-plans">
+        <div className="welcome-container">
+          <div className="welcome-content">
+            <div className="welcome-headline">
+              <span className="headline-line"></span>
+              <span className="headline-text">SPACIOUS FLOOR PLANS</span>
+            </div>
+            <h2 className="welcome-title">Floor Plans</h2>
+            <p className="welcome-body">
+              Explore our thoughtfully designed floor plans, each maximized for spacious, city living. Choose from our
+              2-bedroom or 3-bedroom layouts, both featuring 2.5 bathrooms and premium finishes throughout.
+            </p>
+            <div className="virtual-tour-buttons">
+              <button
+                className="virtual-tour-button"
+                onClick={(e) => {
+                  e.preventDefault()
+                  navigate('/floorplan2')
+                }}
+              >
+                2 Bedroom →
+              </button>
+              <button
+                className="virtual-tour-button"
+                onClick={(e) => {
+                  e.preventDefault()
+                  navigate('/floorplan3')
+                }}
+              >
+                3 Bedroom →
+              </button>
+            </div>
+          </div>
+          <div className="welcome-image">
+            <img src="/photo28.jpg" alt="Bella Via Condominiums" />
           </div>
         </div>
       </section>
@@ -270,7 +301,7 @@ function HomePage() {
       {/* Footer */}
       <footer className="footer">
         <div className="container">
-          <p>&copy; 2024 Bella Via. All rights reserved.</p>
+          <p>&copy; 2025 Bella Via. All rights reserved.</p>
         </div>
       </footer>
     </div>
@@ -284,14 +315,22 @@ function GalleryPage() {
     window.scrollTo(0, 0)
   }, [])
 
+  const handleBackClick = () => {
+    navigate('/')
+    setTimeout(() => {
+      const element = document.getElementById('photo-gallery')
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    }, 100)
+  }
+
   return (
     <div className="gallery-page">
       <button
-        className="gallery-back-icon"
-        aria-label="Back to home"
-        onClick={() => {
-          navigate('/')
-        }}
+        className="gallery-back-icon gallery-page-back-icon"
+        aria-label="Back to photo gallery"
+        onClick={handleBackClick}
       >
         ←
       </button>
@@ -316,7 +355,7 @@ function GalleryPage() {
       </div>
 
       <footer className="footer">
-        <p>&copy; 2024 Bella Via. All rights reserved.</p>
+        <p>&copy; 2025 Bella Via. All rights reserved.</p>
       </footer>
     </div>
   )
@@ -383,14 +422,22 @@ function Bedroom2Page() {
     window.scrollTo(0, 0)
   }, [])
 
+  const handleBackClick = () => {
+    navigate('/')
+    setTimeout(() => {
+      const element = document.getElementById('virtual-tour')
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    }, 100)
+  }
+
   return (
     <div className="bedroom-page">
       <button
-        className="gallery-back-icon"
-        aria-label="Back to home"
-        onClick={() => {
-          navigate('/')
-        }}
+        className="gallery-back-icon virtual-tour-back-icon"
+        aria-label="Back to virtual tour"
+        onClick={handleBackClick}
       >
         ←
       </button>
@@ -419,14 +466,22 @@ function Bedroom3Page() {
     window.scrollTo(0, 0)
   }, [])
 
+  const handleBackClick = () => {
+    navigate('/')
+    setTimeout(() => {
+      const element = document.getElementById('virtual-tour')
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    }, 100)
+  }
+
   return (
     <div className="bedroom-page">
       <button
-        className="gallery-back-icon"
-        aria-label="Back to home"
-        onClick={() => {
-          navigate('/')
-        }}
+        className="gallery-back-icon virtual-tour-back-icon"
+        aria-label="Back to virtual tour"
+        onClick={handleBackClick}
       >
         ←
       </button>
@@ -442,6 +497,78 @@ function Bedroom3Page() {
             allow="xr-spatial-tracking"
             title="3 Bedroom Virtual Tour"
           ></iframe>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function FloorPlan2Page() {
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
+  const handleBackClick = () => {
+    navigate('/')
+    setTimeout(() => {
+      const element = document.getElementById('floor-plans')
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    }, 100)
+  }
+
+  return (
+    <div className="bedroom-page">
+      <button
+        className="gallery-back-icon floor-plan-back-icon"
+        aria-label="Back to floor plans"
+        onClick={handleBackClick}
+      >
+        ←
+      </button>
+
+      <div className="bedroom-page-content">
+        <div className="matterport-embed">
+          <img src="/2bedplan.png" alt="2 Bedroom Floor Plan" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function FloorPlan3Page() {
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
+  const handleBackClick = () => {
+    navigate('/')
+    setTimeout(() => {
+      const element = document.getElementById('floor-plans')
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    }, 100)
+  }
+
+  return (
+    <div className="bedroom-page">
+      <button
+        className="gallery-back-icon floor-plan-back-icon"
+        aria-label="Back to floor plans"
+        onClick={handleBackClick}
+      >
+        ←
+      </button>
+
+      <div className="bedroom-page-content">
+        <div className="matterport-embed">
+          <img src="/3bedplan.png" alt="3 Bedroom Floor Plan" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
         </div>
       </div>
     </div>
