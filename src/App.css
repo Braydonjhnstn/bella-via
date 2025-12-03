@@ -422,6 +422,13 @@ html {
   position: relative;
 }
 
+.bedroom-page .footer {
+  margin-left: -60px;
+  margin-right: -60px;
+  width: calc(100% + 120px);
+  margin-top: auto;
+}
+
 .bedroom-page-header {
   max-width: 1200px;
   margin: 40px auto 30px;
@@ -1018,6 +1025,12 @@ html {
 
   .bedroom-page-content {
     padding: 0 20px;
+  }
+
+  .bedroom-page .footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    width: calc(100% + 40px);
   }
 
   .photo-detail-content {
