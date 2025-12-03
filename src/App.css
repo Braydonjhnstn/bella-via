@@ -1105,16 +1105,6 @@ html {
     width: calc(100% + 40px);
   }
 
-  .gallery-back-icon {
-    font-size: 2.5rem;
-    top: 15px;
-    left: 15px;
-  }
-
-  .virtual-tour-back-icon {
-    top: 8vh;
-  }
-
   .photo-detail-content {
     grid-template-columns: 1fr;
   }
@@ -1131,6 +1121,29 @@ html {
     margin-left: -20px;
     margin-right: -20px;
     width: calc(100% + 40px);
+  }
+
+  .gallery-back-icon {
+    font-size: 3rem;
+    top: 15px;
+    left: 15px;
+    font-weight: 700;
+  }
+
+  .virtual-tour-back-icon {
+    top: 8vh;
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  .gallery-page-back-icon {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  .floor-plan-back-icon {
+    font-size: 3rem;
+    font-weight: 700;
   }
 }
 
