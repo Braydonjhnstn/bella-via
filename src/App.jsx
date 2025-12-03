@@ -395,17 +395,19 @@ function Bedroom2Page() {
         ←
       </button>
 
-      <header className="bedroom-page-header">
-        <h1 className="bedroom-page-title">2 Bedroom 2.5 Bathroom Virtual Tour</h1>
-      </header>
-
       <div className="bedroom-page-content">
-        <p>Virtual tour content for 2 bedroom unit coming soon.</p>
+        <div className="matterport-embed">
+          <iframe
+            width="100%"
+            height="600"
+            src="https://my.matterport.com/show/?m=zQMJRDMih6z"
+            frameBorder="0"
+            allowFullScreen
+            allow="xr-spatial-tracking"
+            title="2 Bedroom Virtual Tour"
+          ></iframe>
+        </div>
       </div>
-
-      <footer className="footer">
-        <p>&copy; 2024 Bella Via. All rights reserved.</p>
-      </footer>
     </div>
   )
 }
@@ -429,17 +431,19 @@ function Bedroom3Page() {
         ←
       </button>
 
-      <header className="bedroom-page-header">
-        <h1 className="bedroom-page-title">3 Bedroom 2.5 Bathroom Virtual Tour</h1>
-      </header>
-
       <div className="bedroom-page-content">
-        <p>Virtual tour content for 3 bedroom unit coming soon.</p>
+        <div className="matterport-embed">
+          <iframe
+            width="100%"
+            height="600"
+            src="https://my.matterport.com/show/?m=72xJMCEbRQo"
+            frameBorder="0"
+            allowFullScreen
+            allow="xr-spatial-tracking"
+            title="3 Bedroom Virtual Tour"
+          ></iframe>
+        </div>
       </div>
-
-      <footer className="footer">
-        <p>&copy; 2024 Bella Via. All rights reserved.</p>
-      </footer>
     </div>
   )
 }
