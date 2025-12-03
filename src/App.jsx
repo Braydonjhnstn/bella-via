@@ -400,7 +400,7 @@ function Bedroom2Page() {
           <iframe
             width="100%"
             height="600"
-            src="https://my.matterport.com/show/?m=zQMJRDMih6z"
+            src="https://my.matterport.com/show/?m=zQMJRDMih6z&play=1&qs=1"
             frameBorder="0"
             allowFullScreen
             allow="xr-spatial-tracking"
@@ -436,7 +436,7 @@ function Bedroom3Page() {
           <iframe
             width="100%"
             height="600"
-            src="https://my.matterport.com/show/?m=72xJMCEbRQo"
+            src="https://my.matterport.com/show/?m=72xJMCEbRQo&play=1&qs=1"
             frameBorder="0"
             allowFullScreen
             allow="xr-spatial-tracking"
