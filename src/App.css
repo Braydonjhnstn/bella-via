@@ -823,6 +823,20 @@ html {
     display: none;
   }
 
+  .nav-separator-before-floor-plans {
+    display: block !important;
+    flex-basis: 100%;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-link-floor-plans {
+    text-align: center;
+  }
+
   .hero-content {
     margin-left: 5%;
     max-width: 90%;

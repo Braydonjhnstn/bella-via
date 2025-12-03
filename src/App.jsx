@@ -94,14 +94,14 @@ function HomePage() {
               >
                 Virtual Tour
               </a>
-              <span className="nav-separator nav-separator-after-virtual-tour">|</span>
+              <span className="nav-separator nav-separator-after-virtual-tour nav-separator-before-floor-plans">|</span>
               <a
                 href="#floor-plans"
                 onClick={(e) => {
                   e.preventDefault()
                   handleScrollTo('floor-plans')
                 }}
-                className="nav-link"
+                className="nav-link nav-link-floor-plans"
               >
                 Floor Plans
               </a>
