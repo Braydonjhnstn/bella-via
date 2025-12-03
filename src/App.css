@@ -1105,6 +1105,16 @@ html {
     width: calc(100% + 40px);
   }
 
+  .gallery-back-icon {
+    font-size: 2.5rem;
+    top: 15px;
+    left: 15px;
+  }
+
+  .virtual-tour-back-icon {
+    top: 8vh;
+  }
+
   .photo-detail-content {
     grid-template-columns: 1fr;
   }
