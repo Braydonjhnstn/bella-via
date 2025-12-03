@@ -269,7 +269,7 @@ function HomePage() {
       {/* Contact Section */}
       <section className="contact" id="apply">
         <div className="container">
-          <h2 className="section-title">Contact Info</h2>
+          <h2 className="section-title">Contact Us</h2>
           <div className="contact-info">
             <div className="contact-info-item">
               <h3>Address</h3>

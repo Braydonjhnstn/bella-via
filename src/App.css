@@ -287,11 +287,13 @@ html {
 }
 
 .section-title {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   text-align: center;
   margin-bottom: 60px;
   color: #333;
   font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  line-height: 1.2;
 }
 
 /* About Us Section */
@@ -670,7 +672,7 @@ html {
 
 .contact-info {
   max-width: 800px;
-  margin: 0 auto 40px;
+  margin: 0 auto 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
@@ -684,10 +686,11 @@ html {
 }
 
 .contact-info-item p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #555;
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.8;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
 }
 
 .contact-copy {
@@ -696,10 +699,13 @@ html {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   line-height: 1.8;
   color: #555;
   text-align: left;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
 }
 
 .contact-form {
